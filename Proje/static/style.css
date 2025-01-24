@@ -1,0 +1,122 @@
+/* style.css dosyasına yazılacak CSS kodları */
+
+/* Sayfa genelinde yazı tipi ve margin ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* Başlık stili */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* Form stili */
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Input ve button düzenleme */
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Liste ve öğe stil */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #ecf0f1;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tamamlanan öğelerin üzerini çizme */
+span[style="text-decoration: line-through"] {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+/* Bağlantı stilleri */
+a {
+    text-decoration: none;
+    color: #3498db;
+    margin-left: 10px;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Bildirim Kutusu */
+#notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-20px);
+    z-index: 1000;
+}
+
+#notification.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sil Düğmesi */
+.deleteLink {
+    color: red;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.deleteLink:hover {
+    text-decoration: underline;
+}

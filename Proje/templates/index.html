@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Listesi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Todo Listesi</h1>
+
+    <!-- Yeni Todo Ekleme Formu -->
+    <form action="/add" method="post">
+        <input type="text" name="todo" placeholder="New Todo" required>
+        <button type="submit">Ekle</button>
+    </form>
+
+    <!-- Dinamik Todo Listesi -->
+    <h2>Things to do</h2>
+    <ul id="todoList">
+        {% for todo in todos %}
+            <li>
+                <span {% if todo.done %}style="text-decoration: line-through"{% endif %}>
+                    {{ todo.todo }}
+                </span>
+                <a href="{{ url_for('check', index=loop.index0) }}">[Tamamla]</a>
+                <a href="{{ url_for('edit', index=loop.index0) }}">[Düzenle]</a>
+                <a href="{{ url_for('delete', index=loop.index0) }}" class="deleteLink">[Sil]</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Silme Bildirimi Gösterme Alanı -->
+    <div id="notification" class="hidden"></div>
+
+    <!-- Show Deleted Todos Link -->
+    <a href="{{ url_for('show_deleted') }}">Show deleted todos</a>
+
+    <!-- JavaScript Dosyası -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

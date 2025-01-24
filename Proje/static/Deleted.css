@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px 50px 50px 50px;
+    padding: 10px 10px 10px 10px;
+    background-color: #eee8dd;
+    color: #212221;
+    font-family: 'Times New Roman', Times, serif;
+
+    
+}
+
+h1 {
+    text-align: center;
+    color: #3b3b3b;
+    margin-top: 20px;
+}
+
+form {
+    display: grid;
+    justify-content: center;
+    margin: 20px 0;
+}
+/* Input ve button düzenleme */
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #80b5d8;
+}
+
+/* Liste ve öğe stil */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 40;
+}
+
+li {
+    background-color: #ecf0f1;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tamamlanan öğelerin üzerini çizme */
+span[style="text-decoration: line-through"] {
+    text-decoration: line-through;
+    color: #7b8283;
+}
+
+/* Bağlantı stilleri */
+a {
+    text-decoration: none;
+    color: #3498db;
+    margin-left: 10px;
+}
+
+a:hover {
+    color: #030303;
+}
+    

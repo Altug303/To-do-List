@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted Todos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='deleted.css') }}">
+</head>
+<body>
+    <h1>Deleted Todos</h1>
+    <ul>
+        {% if deleted_todos %}
+            {% for todo in deleted_todos %}
+                <li>
+                    {{ todo.todo }} {% if todo.done %}(Completed){% else %}(Not Done){% endif %}
+                    <a href="{{ url_for('restore', index=loop.index0) }}">[Restore]</a>
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>No todos have been deleted yet.</li>
+        {% endif %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
